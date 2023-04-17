@@ -1,4 +1,14 @@
 function nav() {
+  function popUp() {
+    const actBtn = document.getElementsByClassName("active_menu")[0];
+
+    if (actBtn.style.display !== "flex") {
+      actBtn.style.display = "flex";
+    } else {
+      actBtn.style.display = "none";
+    }
+  }
+
   return (
     <nav className="navbar">
       <div className="nav-brand">ConvertU</div>
@@ -8,7 +18,7 @@ function nav() {
           <li>Help</li>
           <li>Contact</li>
         </ul>
-        <div className="menu_btn"></div>
+        <div onClick={popUp} className="menu_btn"></div>
         <div className="active_menu">
           <div className="menu">
             <li>About</li>
